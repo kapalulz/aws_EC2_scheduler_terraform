@@ -4,15 +4,7 @@ Turn Off/On your EC2 instances at a specific time/day
 
 
 
-import boto3
-import os
 
-region = os.environ['region']
-name_ID = os.environ['name_ID']
-values_ID = os.environ['values_ID']
-filter_ID = 'tag:'+ name_ID
-
-ec2 = boto3.resource('ec2', region)
 
 def lambda_handler(event, context):
 
