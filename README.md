@@ -3,11 +3,7 @@ Turn Off/On your EC2 instances at a specific time/day
 (cron expression)
 
 
-
-
-
-def lambda_handler(event, context):
-
+_
     filters = [{
             'Name': filter_ID,
             'Values': [values_ID]
