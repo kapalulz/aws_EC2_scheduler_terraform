@@ -1,6 +1,6 @@
                                                          # ec2_scheduler
-                                     **Turn Off/On your EC2 instances at a specific time/day**
-                                                       **(cron expression)**
+                                       Turn Off/On your EC2 instances at a specific time/day
+                                                         (cron expression)
 
 
 ***The EC2 scheduler project is a Terraform-based solution that automates the scheduling of Amazon EC2 instances. It provides the ability to define and manage schedules for starting and stopping EC2 instances based on predefined rules. This project streamlines resource utilization by ensuring that instances are only running when needed, resulting in cost savings and improved operational efficiency.***
