@@ -9,4 +9,4 @@ Using Terraform, the EC2 scheduler project allows users to define schedules usin
 </sub>
 
 
-*** By implementing the EC2 scheduler, organizations can effectively manage their EC2 resources, reduce operational expenses, and ensure optimal utilization of their infrastructure. It simplifies the management of EC2 instances, improves resource efficiency, and contributes to a more cost-effective and streamlined cloud environment. ***
+***By implementing the EC2 scheduler, organizations can effectively manage their EC2 resources, reduce operational expenses, and ensure optimal utilization of their infrastructure. It simplifies the management of EC2 instances, improves resource efficiency, and contributes to a more cost-effective and streamlined cloud environment.***
