@@ -1,11 +1,46 @@
-                                                    # ec2_scheduler
-                                  Turn Off/On your EC2 instances at a specific time/day
-                                                   (cron expression)
+# AWS EC2 Scheduler with Terraform
 
+Infrastructure as Code for starting and stopping EC2 instances on a schedule.
 
-***The EC2 scheduler project is a Terraform-based solution that automates the scheduling of Amazon EC2 instances. It provides the ability to define and manage schedules for starting and stopping EC2 instances based on predefined rules. This project streamlines resource utilization by ensuring that instances are only running when needed, resulting in cost savings and improved operational efficiency.***
+The project combines Terraform-managed AWS resources with Lambda functions and scheduled expressions so non-production instances can be stopped outside working hours and started when needed.
 
-***Using Terraform, the EC2 scheduler project allows users to define schedules using a simple and intuitive configuration file. The schedules can be customized to accommodate specific business requirements, such as starting instances during business hours and stopping them outside of working hours or on weekends. This flexibility allows organizations to optimize their EC2 usage and reduce costs without compromising on availability.***
+## Components
 
+- Terraform configuration for IAM and Lambda resources
+- Lambda scripts for EC2 start/stop operations
+- Schedule configuration based on cron expressions
+- Variables and outputs for environment-specific settings
 
-***By implementing the EC2 scheduler, organizations can effectively manage their EC2 resources, reduce operational expenses, and ensure optimal utilization of their infrastructure. It simplifies the management of EC2 instances, improves resource efficiency, and contributes to a more cost-effective and streamlined cloud environment.***
+## Prerequisites
+
+- Terraform
+- AWS credentials configured through the standard credential chain
+- IAM permissions for Lambda, EC2, logging, and the scheduling service
+
+## Usage
+
+```bash
+terraform init
+terraform fmt -check
+terraform validate
+terraform plan
+terraform apply
+```
+
+Before applying, review:
+
+- Target instance selection
+- AWS Region
+- Schedule expressions and their time zone
+- Lambda IAM permissions
+- Expected start/stop behavior during holidays and maintenance windows
+
+## Operations
+
+Check Lambda logs after deployment and test the functions against disposable instances before enabling the production schedule.
+
+```bash
+terraform destroy
+```
+
+> Scheduled shutdown can interrupt workloads. Exclude stateful or business-critical instances unless their recovery behavior has been tested.
